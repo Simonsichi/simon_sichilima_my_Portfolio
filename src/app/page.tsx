@@ -20,30 +20,20 @@ const HomePage = () => {
   // Skills data with categories
   const skillsData = [
     // Frontend
-    { name: 'HTML5/CSS', level: 95, category: 'frontend' },
+    { name: 'HTML/CSS', level: 95, category: 'frontend' },
     { name: 'React', level: 90, category: 'frontend' },
     { name: 'TypeScript', level: 85, category: 'frontend' },
     { name: 'Tailwind CSS', level: 90, category: 'frontend' },
-    { name: 'Vaadin', level: 60, category: 'frontend'},
     
     // Mobile
+    { name: 'Flutter | Dart', level: 70, category: 'mobile' },
     { name: 'Android Studio | Java', level: 70, category: 'mobile' },
-   
-    // Desktop
-    { name: 'Java', level: 70, category: 'backend' },
-    { name: 'Html/CSS', level: 65, category: 'backend' },
-    { name: 'MySQL', level: 70, category: 'backend' },
-    { name: 'PostgreSQL', level: 80, category: 'backend' },
+    { name: 'Kotlin Multiplatform | JetPack', level: 70, category: 'mobile' },
     
     // Backend
     { name: 'Java Spring Boot', level: 65, category: 'backend' },
     { name: 'NestJs', level: 65, category: 'backend' },
-    { name: 'Java', level: 70, category: 'backend' },
-    { name: 'PHP Laravel', level: 65, category: 'backend' },
-    { name: 'PHP', level: 65, category: 'backend' },
-    { name: 'Codeignitor', level: 65, category: 'backend' },
-    { name: 'C++', level: 65, category: 'backend' },
-    { name: 'javaScript', level: 65, category: 'backend' },
+    { name: 'MongoDB', level: 70, category: 'backend' },
     { name: 'PostgreSQL', level: 65, category: 'backend' },
     
     // Tools
@@ -298,57 +288,55 @@ ${formData.name || 'Visitor'}`);
       </div>
       
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-20 relative z-10">
+      <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative z-10">
         <div className="container mx-auto max-w-6xl text-center">
-          <div className="mb-12 animate-fade-in">
+          <div className="mb-8 sm:mb-12 animate-fade-in">
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-primary-200/50 dark:border-dark-border/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-8 shadow-lg hover:shadow-xl dark:shadow-dark-surface/50 transition-all duration-300">
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-primary-200/50 dark:border-dark-border/50 text-primary-700 dark:text-primary-300 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 shadow-lg hover:shadow-xl dark:shadow-dark-surface/50 transition-all duration-300">
               <div className="relative">
-                <span className="w-3 h-3 bg-success-500 dark:bg-success-400 rounded-full animate-pulse block"></span>
-                <span className="absolute inset-0 w-3 h-3 bg-success-500 dark:bg-success-400 rounded-full animate-ping"></span>
+                <span className="w-2 h-2 sm:w-3 sm:h-3 bg-success-500 dark:bg-success-400 rounded-full animate-pulse block"></span>
+                <span className="absolute inset-0 w-2 h-2 sm:w-3 sm:h-3 bg-success-500 dark:bg-success-400 rounded-full animate-ping"></span>
               </div>
               Available for new opportunities
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-secondary-900 dark:text-dark-text-primary mb-8 leading-[0.9] tracking-tight">
-              Hi, I'm{' '}
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-secondary-900 dark:text-dark-text-primary mb-6 sm:mb-8 leading-tight sm:leading-tight md:leading-[1.1] tracking-tight px-2">
+              <span className="block mb-2 sm:mb-3">Hello</span>
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent animate-slide-up">
-                  Simon
+                  Simon Sichilima
                 </span>
-                <div className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-primary-500/30 via-primary-600/30 to-accent-500/30 dark:from-primary-400/40 dark:via-primary-500/40 dark:to-accent-400/40 rounded-full blur-sm"></div>
-                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 rounded-full"></div>
+                <div className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-1 sm:h-2 bg-gradient-to-r from-primary-500/30 via-primary-600/30 to-accent-500/30 dark:from-primary-400/40 dark:via-primary-500/40 dark:to-accent-400/40 rounded-full blur-sm"></div>
+                <div className="absolute -bottom-0.5 sm:-bottom-1 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 rounded-full"></div>
               </span>
-              <br className="hidden sm:block" />
-              <span className="text-secondary-700 dark:text-dark-text-secondary">Sichilima</span>
             </h1>
             
             {/* Subtitle */}
-            <div className="mb-6">
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary-600 dark:text-dark-text-secondary font-semibold mb-2">
+            <div className="mb-4 sm:mb-6 mt-6 sm:mt-8">
+              <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary-600 dark:text-dark-text-secondary font-semibold mb-2">
                 Software Engineer
               </p>
-              <p className="text-lg sm:text-xl md:text-2xl text-secondary-500 dark:text-dark-text-muted font-medium">
-                web applications & Full-Stack Developer
+              <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-secondary-500 dark:text-dark-text-muted font-medium">
+                Web Applications & Full-Stack Developer
               </p>
             </div>
             
             {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl text-secondary-600 dark:text-dark-text-secondary mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-              Passionate about creating <span className="text-primary-600 dark:text-primary-400 font-semibold">impactful digital solutions</span> that drive business growth and user satisfaction. 
-              From mobile apps to web platforms, I build experiences that matter.
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-secondary-600 dark:text-dark-text-secondary mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
+              Passionate about making everyday life easier through technology. <span className="text-primary-600 dark:text-primary-400 font-semibold">Creating innovative digital solutions that make a real difference</span> and building products that users can truly rely on and depend on. 
+              From simple web-based systems and mobile apps to transformative, life-changing solutions powered by technology.
             </p>
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center mb-12 sm:mb-20 px-2">
             <a 
               href="#projects" 
-              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-primary-500/25 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-base sm:text-lg rounded-xl sm:rounded-2xl shadow-2xl hover:shadow-primary-500/25 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden w-full sm:w-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <svg className="w-6 h-6 relative z-10 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 relative z-10 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
               <span className="relative z-10">View My Work</span>
@@ -357,9 +345,9 @@ ${formData.name || 'Visitor'}`);
             
             <a 
               href="#contact" 
-              className="group inline-flex items-center gap-3 px-10 py-5 bg-white/90 backdrop-blur-sm border-2 border-primary-500 text-primary-600 font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-primary-50"
+              className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm border-2 border-primary-500 text-primary-600 dark:text-primary-400 font-bold text-base sm:text-lg rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-primary-50 dark:hover:bg-primary-900/30 w-full sm:w-auto"
             >
-              <svg className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
               Let's Talk
@@ -367,13 +355,13 @@ ${formData.name || 'Visitor'}`);
           </div>
 
           {/* Scroll Indicator */}
-          <div className="flex flex-col items-center text-secondary-400 animate-fade-in" style={{animationDelay: '1s'}}>
-            <p className="text-sm mb-4 font-medium tracking-wider uppercase">Discover More</p>
+          <div className="hidden sm:flex flex-col items-center text-secondary-400 animate-fade-in" style={{animationDelay: '1s'}}>
+            <p className="text-xs sm:text-sm mb-3 sm:mb-4 font-medium tracking-wider uppercase">Discover More</p>
             <div className="relative">
-              <div className="w-8 h-12 border-2 border-secondary-300 rounded-full flex justify-center p-2 bg-white/50 backdrop-blur-sm">
-                <div className="w-1.5 h-3 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full animate-bounce"></div>
+              <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-secondary-300 dark:border-secondary-700 rounded-full flex justify-center p-2 bg-white/50 dark:bg-dark-surface/50 backdrop-blur-sm">
+                <div className="w-1 h-2 sm:w-1.5 sm:h-3 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full animate-bounce"></div>
               </div>
-              <div className="absolute -inset-2 border border-secondary-200 rounded-full animate-ping opacity-20"></div>
+              <div className="absolute -inset-2 border border-secondary-200 dark:border-secondary-800 rounded-full animate-ping opacity-20"></div>
             </div>
           </div>
         </div>
@@ -394,17 +382,33 @@ ${formData.name || 'Visitor'}`);
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
-                Software Engineer | web applications & Full-Stack Developer | <br />
-                Graphics Designer | digital inovator | IT Support
+                Software Engineer | Full-Stack Developer | <br />
+                Graphics Designer | Digital Innovator | IT Support Specialist
               </h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed">
-                With over three years of experience, I specialize in developing cross-platform mobile and web applications. My work with MojaLoop and in data analytics has delivered scalable financial solutions and meaningful insights. I have a background in digital banking, digital transformation, systems and web applications payment integration.
+                With over <span className="font-semibold text-primary-600 dark:text-primary-400">three years of hands-on experience</span>, I specialize in developing robust cross-platform mobile and web applications that solve real-world problems. My journey in tech has taken me from building innovative fintech solutions with <span className="font-semibold">MojaLoop</span> to crafting data-driven insights and scalable financial systems.
+              </p>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed">
+                I hold a <span className="font-semibold text-secondary-900 dark:text-dark-text-primary">Bachelor's degree in Computer Science</span> from Mulungushi University, where I built a strong foundation in software engineering principles, algorithms, and system design. My technical expertise spans the full development stack—from intuitive frontend interfaces to powerful backend architectures and seamless payment integrations.
               </p>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-8 leading-relaxed">
-                I'm passionate about helping teams turn ideas into real, user-focused solutions.
+                Beyond code, I'm passionate about <span className="font-semibold text-accent-600 dark:text-accent-400">digital transformation</span> and helping businesses leverage technology to achieve their goals. Whether it's modernizing legacy systems, implementing cloud solutions, or designing user-centric applications, I thrive on turning complex challenges into elegant, scalable solutions.
               </p>
-              <div className="flex gap-4">
-            
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-lg text-sm font-medium">
+                  <span className="text-lg">🎓</span>
+                  BSc Computer Science
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-success-50 dark:bg-success-900/30 text-success-700 dark:text-success-300 rounded-lg text-sm font-medium">
+                  <span className="text-lg">💼</span>
+                  3+ Years Experience
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-accent-50 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-lg text-sm font-medium">
+                  <span className="text-lg">🚀</span>
+                  15+ Projects Delivered
+                </div>
+              </div>
+              <div className="flex gap-4 mt-8">
                 <CVDownloadButton variant="secondary" size="md" />
               </div>
             </div>
@@ -680,21 +684,21 @@ ${formData.name || 'Visitor'}`);
                 year: '2025'
               },
               {
-                title: 'Book Collection system',
-                description: 'Modern Book management system that stores a collection of different kinds of books by category , prices, Authors and their respctive Book titles.',
-                tech: ['RestAPI', 'PHP', 'React', 'tailwindCSS'],
+                title: 'Imangatech Innovations Website',
+                description: 'Modern corporate website for Imangatech Innovations company showcasing services, team, and company achievements.',
+                tech: ['TypeScript', 'Tailwind CSS', 'React', 'Corporate'],
                 image: '/api/placeholder/400/250',
                 category: 'Web App',
-                status: 'Not available',
+                status: 'Live',
                 year: '2024'
               },
               {
-                title: 'Zuct_Accommodation_system',
-                description: 'Web based student accommodation system which makes it easier for students to find accommodation near campus.',
-                tech: ['RestAPI', 'PHP', 'React', 'tailwindCSS'],
+                title: 'Spring Boot Forensics Engine',
+                description: 'Backend forensics processing engine built with Spring Boot for data analysis and investigation workflows.',
+                tech: ['Java', 'Spring Boot', 'Backend', 'Analytics'],
                 image: '/api/placeholder/400/250',
-                category: 'Web App',
-                status: 'Not Available',
+                category: 'Backend',
+                status: 'Live',
                 year: '2023'
               }
             ].map((project, index) => (
