@@ -21,29 +21,27 @@ const HomePage = () => {
   const skillsData = [
     // Frontend
     { name: 'HTML/CSS', level: 95, category: 'frontend' },
-    { name: 'React', level: 90, category: 'frontend' },
-    { name: 'TypeScript', level: 85, category: 'frontend' },
-    { name: 'Tailwind CSS', level: 90, category: 'frontend' },
+    { name: 'React', level: 70, category: 'frontend' },
+    { name: 'TypeScript', level: 65, category: 'frontend' },
+    { name: 'Tailwind CSS', level: 80, category: 'frontend' },
     
     // Mobile
-    { name: 'Flutter | Dart', level: 70, category: 'mobile' },
     { name: 'Android Studio | Java', level: 70, category: 'mobile' },
-    { name: 'Kotlin Multiplatform | JetPack', level: 70, category: 'mobile' },
+    
     
     // Backend
     { name: 'Java Spring Boot', level: 65, category: 'backend' },
     { name: 'NestJs', level: 65, category: 'backend' },
-    { name: 'MongoDB', level: 70, category: 'backend' },
     { name: 'PostgreSQL', level: 65, category: 'backend' },
     
     // Tools
-    { name: 'Git/GitHub', level: 90, category: 'tools' },
+    { name: 'Git/GitHub', level: 75, category: 'tools' },
     { name: 'Docker', level: 70, category: 'tools' },
-    { name: 'Figma', level: 85, category: 'tools' },
-    { name: 'Circle CI', level: 85, category: 'tools' },
-    { name: 'VS Code', level: 95, category: 'tools' },
-    { name: 'NETBEANS', level: 65, category: 'tools' },
-    { name: 'Andriod', level: 65, category: 'backend' },
+    { name: 'Figma', level: 75, category: 'tools' },
+    { name: 'VS Code', level: 85, category: 'tools' },
+    { name: 'NetBeans', level: 65, category: 'tools' },
+    { name: 'Andriod Studio', level: 65, category: 'tools' },
+    { name: 'Adobe Suits', level: 65, category: "tools"},
 
   ];
 
@@ -383,13 +381,13 @@ ${formData.name || 'Visitor'}`);
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
                 Software Engineer | Full-Stack Developer | <br />
-                Graphics Designer | Digital Innovator | IT Support Specialist
+                Graphics Designer | Digital Innovator | IT Support Specialist 
               </h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed">
                 With over <span className="font-semibold text-primary-600 dark:text-primary-400">three years of hands-on experience</span>, I specialize in developing robust cross-platform mobile and web applications that solve real-world problems. My journey in tech has taken me from building innovative fintech solutions with <span className="font-semibold">MojaLoop</span> to crafting data-driven insights and scalable financial systems.
               </p>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed">
-                I hold a <span className="font-semibold text-secondary-900 dark:text-dark-text-primary">Bachelor's degree in Computer Science</span> from Mulungushi University, where I built a strong foundation in software engineering principles, algorithms, and system design. My technical expertise spans the full development stack—from intuitive frontend interfaces to powerful backend architectures and seamless payment integrations.
+                I hold a <span className="font-semibold text-secondary-900 dark:text-dark-text-primary">Bachelor's degree in Computer Science</span> from Zambia University College of Technology (ZUCT) , where I built a strong foundation in software engineering principles, algorithms, and system design. My technical expertise spans the full development stack—from intuitive frontend interfaces to powerful backend architectures and seamless payment integrations.
               </p>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-8 leading-relaxed">
                 Beyond code, I'm passionate about <span className="font-semibold text-accent-600 dark:text-accent-400">digital transformation</span> and helping businesses leverage technology to achieve their goals. Whether it's modernizing legacy systems, implementing cloud solutions, or designing user-centric applications, I thrive on turning complex challenges into elegant, scalable solutions.
@@ -405,7 +403,7 @@ ${formData.name || 'Visitor'}`);
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-accent-50 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-lg text-sm font-medium">
                   <span className="text-lg">🚀</span>
-                  15+ Projects Delivered
+                  4+ Projects Delivered
                 </div>
               </div>
               <div className="flex gap-4 mt-8">
@@ -450,6 +448,8 @@ ${formData.name || 'Visitor'}`);
                     <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Helping businesses modernize and grow with cloud solutions and comprehensive digital transformation.</p>
                   </div>
                 </div>
+
+                
               </div>
             </div>
           </div>
@@ -675,7 +675,7 @@ ${formData.name || 'Visitor'}`);
                 year: '2023'
               },
               {
-                title: 'Leave_Web_App',
+                title: 'Leave_Form_Web_App',
                 description: 'Leave form is a web based application that administrated the leave management process in an organization to simplify the communication channel am employees.',
                 tech: ['SpringBoot', 'Web App', '', 'RestAPI', 'MVC'],
                 image: '/api/placeholder/400/250',
@@ -683,24 +683,7 @@ ${formData.name || 'Visitor'}`);
                 status: 'Not available',
                 year: '2025'
               },
-              {
-                title: 'Imangatech Innovations Website',
-                description: 'Modern corporate website for Imangatech Innovations company showcasing services, team, and company achievements.',
-                tech: ['TypeScript', 'Tailwind CSS', 'React', 'Corporate'],
-                image: '/api/placeholder/400/250',
-                category: 'Web App',
-                status: 'Live',
-                year: '2024'
-              },
-              {
-                title: 'Spring Boot Forensics Engine',
-                description: 'Backend forensics processing engine built with Spring Boot for data analysis and investigation workflows.',
-                tech: ['Java', 'Spring Boot', 'Backend', 'Analytics'],
-                image: '/api/placeholder/400/250',
-                category: 'Backend',
-                status: 'Live',
-                year: '2023'
-              }
+            
             ].map((project, index) => (
               <div 
                 key={index} 
