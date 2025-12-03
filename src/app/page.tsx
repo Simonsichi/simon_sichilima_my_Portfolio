@@ -33,7 +33,8 @@ const HomePage = () => {
     { name: 'Java Spring Boot', level: 65, category: 'backend' },
     { name: 'NestJs', level: 65, category: 'backend' },
     { name: 'PostgreSQL', level: 65, category: 'backend' },
-    
+    { name: 'Codeigniter', level: 65, category: 'backend' },
+    { name: 'Laravel', level: 65, category: 'backend' },
     // Tools
     { name: 'Git/GitHub', level: 75, category: 'tools' },
     { name: 'Docker', level: 70, category: 'tools' },
@@ -42,6 +43,7 @@ const HomePage = () => {
     { name: 'NetBeans', level: 65, category: 'tools' },
     { name: 'Andriod Studio', level: 65, category: 'tools' },
     { name: 'Adobe Suits', level: 65, category: "tools"},
+    { name: 'Postman', level: 65, category: 'tools' },
 
   ];
 
