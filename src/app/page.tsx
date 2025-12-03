@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import CVDownloadButton from '../components/CVDownloadButton';
+import { certificates, viewCertificate, Certificate } from '@/lib/certificatesData';
 
 const HomePage = () => {
   // Form state management
@@ -21,29 +22,30 @@ const HomePage = () => {
   const skillsData = [
     // Frontend
     { name: 'HTML/CSS', level: 95, category: 'frontend' },
-    { name: 'React', level: 90, category: 'frontend' },
-    { name: 'TypeScript', level: 85, category: 'frontend' },
-    { name: 'Tailwind CSS', level: 90, category: 'frontend' },
-    
+    { name: 'React', level: 70, category: 'frontend' },
+    { name: 'TypeScript', level: 65, category: 'frontend' },
+    { name: 'Tailwind CSS', level: 80, category: 'frontend' },
+
     // Mobile
-    { name: 'Flutter | Dart', level: 70, category: 'mobile' },
     { name: 'Android Studio | Java', level: 70, category: 'mobile' },
-    { name: 'Kotlin Multiplatform | JetPack', level: 70, category: 'mobile' },
-    
+
+
     // Backend
     { name: 'Java Spring Boot', level: 65, category: 'backend' },
     { name: 'NestJs', level: 65, category: 'backend' },
-    { name: 'MongoDB', level: 70, category: 'backend' },
     { name: 'PostgreSQL', level: 65, category: 'backend' },
     
+    { name: 'Codeigniter', level: 65, category: 'backend' },
+    { name: 'Laravel', level: 65, category: 'backend' },
     // Tools
-    { name: 'Git/GitHub', level: 90, category: 'tools' },
+    { name: 'Git/GitHub', level: 75, category: 'tools' },
     { name: 'Docker', level: 70, category: 'tools' },
-    { name: 'Figma', level: 85, category: 'tools' },
-    { name: 'Circle CI', level: 85, category: 'tools' },
-    { name: 'VS Code', level: 95, category: 'tools' },
-    { name: 'NETBEANS', level: 65, category: 'tools' },
-    { name: 'Andriod', level: 65, category: 'backend' },
+    { name: 'Figma', level: 75, category: 'tools' },
+    { name: 'VS Code', level: 85, category: 'tools' },
+    { name: 'NetBeans', level: 65, category: 'tools' },
+    { name: 'Andriod Studio', level: 65, category: 'tools' },
+    { name: 'Adobe Suits', level: 65, category: "tools"},
+    { name: 'Postman', level: 65, category: 'tools' },
 
   ];
 
@@ -318,13 +320,13 @@ ${formData.name || 'Visitor'}`);
                 Software Engineer
               </p>
               <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-secondary-500 dark:text-dark-text-muted font-medium">
-                Web Applications & Full-Stack Developer
+                Web Application & Full-Stack Developer
               </p>
             </div>
             
             {/* Description */}
             <p className="text-sm xs:text-base sm:text-lg md:text-xl text-secondary-600 dark:text-dark-text-secondary mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
-              Passionate about making everyday life easier through technology. <span className="text-primary-600 dark:text-primary-400 font-semibold">Creating innovative digital solutions that make a real difference</span> and building products that users can truly rely on and depend on. 
+              Passionate about making everyday life easier through technology. <span className="text-primary-600 dark:text-primary-400 font-semibold">Creating innovative digital solutions that make a real difference</span> and building products that users can truly rely and depend on. 
               From simple web-based systems and mobile apps to transformative, life-changing solutions powered by technology.
             </p>
           </div>
@@ -661,71 +663,67 @@ ${formData.name || 'Visitor'}`);
                 description: 'Web based student information system that is automated and uses obfuscation technology to advance and encrypt the system from any unauthorised users.',
                 tech: ['PHP', 'LARAVEL_PHP', 'Data_Mining', 'Web_Based_Application'],
                 image: '/api/placeholder/400/250',
-                category: 'Web App',
+                category: 'Education',
                 status: 'not yet hosted (unavailable)',
                 year: '2024'
               },
               {
                 title: 'My Portfolio',
                 description: 'Web based morden Portfolio.',
-                tech: ['NestJS', 'JavaScript', 'TwailwindCSS', 'vercel.json'],
+                tech: ['JavaScript', 'NestJS', 'TwailwindCSS', 'vercel.json'],
                 image: '/api/placeholder/400/250',
-                category: 'Profession',
+                category: 'Carreer',
                 status: 'Available',
                 year: '2023'
               },
               {
                 title: 'Leave_Web_App',
-                description: 'Leave form is a web based application that administrated the leave management process in an organization to simplify the communication channel am employees.',
-                tech: ['SpringBoot', 'Web App', '', 'RestAPI', 'MVC'],
+                description: 'Leave form is a web based application that administrated the leave management process in an organization to simplify the communication channel and simplifys the manual operation by the human resource.',
+                tech: ['Java', 'SpringBoot', 'TwailwindCSS', 'RestAPI', 'MVC'],
                 image: '/api/placeholder/400/250',
                 category: 'FinTech',
-                status: 'Not available',
+                status: 'Available',
                 year: '2025'
               },
-              {
-                title: 'Imangatech Innovations Website',
-                description: 'Modern corporate website for Imangatech Innovations company showcasing services, team, and company achievements.',
-                tech: ['TypeScript', 'Tailwind CSS', 'React', 'Corporate'],
-                image: '/api/placeholder/400/250',
-                category: 'Web App',
-                status: 'Live',
-                year: '2024'
-              },
-              {
-                title: 'Spring Boot Forensics Engine',
-                description: 'Backend forensics processing engine built with Spring Boot for data analysis and investigation workflows.',
-                tech: ['Java', 'Spring Boot', 'Backend', 'Analytics'],
-                image: '/api/placeholder/400/250',
-                category: 'Backend',
-                status: 'Live',
-                year: '2023'
-              }
+              
             ].map((project, index) => (
               <div 
                 key={index} 
-                className="group relative bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary-500/10 dark:hover:shadow-primary-400/20 transition-all duration-500 hover:scale-105 hover:-translate-y-4"
+                className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary-500/20 dark:hover:shadow-primary-400/30 transition-all duration-700 hover:scale-[1.02] hover:-translate-y-3"
                 style={{ 
                   animationDelay: `${index * 150}ms`,
                   animation: 'fadeInUp 0.8s ease-out forwards'
                 }}
               >
+                {/* Glass sliding overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                
+                {/* Secondary glass layer */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-accent-500/5 to-primary-500/5 dark:from-primary-400/10 dark:via-accent-400/10 dark:to-primary-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
                 {/* Status badge */}
-                <div className="absolute top-4 right-4 z-20">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/90 text-white text-xs font-medium rounded-full backdrop-blur-sm">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div className="absolute top-4 right-4 z-30">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-md text-primary-600 dark:text-primary-400 text-xs font-medium rounded-full border border-white/40 dark:border-white/20 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
                     {project.status}
                   </span>
                 </div>
 
                 {/* Image container with overlay */}
-                <div className="relative h-48 bg-gradient-to-br from-primary-100 via-primary-50 to-accent-100 dark:from-primary-900/30 dark:via-primary-800/20 dark:to-accent-900/30 flex items-center justify-center overflow-hidden">
+                <div className="relative h-52 bg-gradient-to-br from-primary-100 via-primary-50 to-accent-100 dark:from-primary-900/40 dark:via-primary-800/30 dark:to-accent-900/40 flex items-center justify-center overflow-hidden">
+                  
+                  {/* Animated background glass pattern */}
+                  <div className="absolute inset-0">
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-white/20 dark:bg-white/10 rounded-full blur-2xl transform -translate-x-8 -translate-y-8 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-1000"></div>
+                    <div className="absolute bottom-0 right-0 w-40 h-40 bg-accent-400/20 dark:bg-accent-400/10 rounded-full blur-3xl transform translate-x-8 translate-y-8 group-hover:-translate-x-4 group-hover:-translate-y-4 transition-transform duration-1000"></div>
+                  </div>
+                  
                   {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 dark:from-primary-400/30 dark:via-transparent dark:to-accent-400/30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-white/10 dark:from-white/20 dark:via-transparent dark:to-white/5"></div>
                   
                   {/* Icon/Logo placeholder */}
-                  <div className="relative z-10 w-16 h-16 bg-white/90 dark:bg-dark-surface/90 rounded-2xl flex items-center justify-center shadow-lg backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
-                    <svg className="w-8 h-8 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="relative z-20 w-20 h-20 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-2xl border border-white/50 dark:border-white/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                    <svg className="w-10 h-10 text-primary-500 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {project.category === 'Mobile App' ? (
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" />
                       ) : project.category === 'Web App' ? (
@@ -738,6 +736,9 @@ ${formData.name || 'Visitor'}`);
                     </svg>
                   </div>
 
+                  {/* Sliding light reflection */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent w-1/3 h-full transform -skew-x-12 -translate-x-full opacity-0 group-hover:translate-x-[300%] group-hover:opacity-100 transition-all duration-1200 ease-out"></div>
+
                   {/* Background pattern */}
                   <div className="absolute inset-0 opacity-10 dark:opacity-5">
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/20 to-transparent transform rotate-12"></div>
@@ -745,24 +746,24 @@ ${formData.name || 'Visitor'}`);
                 </div>
 
                 {/* Card content */}
-                <div className="p-6 relative">
+                <div className="p-6 relative bg-white/50 dark:bg-dark-surface/50 backdrop-blur-sm">
                   {/* Project header */}
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
-                      <span className="inline-block px-2 py-1 text-xs font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 rounded-md mb-2">
+                      <span className="inline-block px-3 py-1.5 text-xs font-semibold text-primary-600 dark:text-primary-400 bg-white/70 dark:bg-primary-900/30 backdrop-blur-md rounded-lg mb-3 border border-primary-200/50 dark:border-primary-700/50 group-hover:shadow-md transition-all duration-300">
                         {project.category}
                       </span>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300 mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-all duration-300 mb-2 group-hover:translate-x-1">
                         {project.title}
                       </h3>
                     </div>
-                    <span className="text-sm text-gray-500 dark:text-dark-text-muted font-medium">
+                    <span className="text-sm text-gray-500 dark:text-dark-text-muted font-medium bg-white/60 dark:bg-dark-card/60 px-3 py-1 rounded-full backdrop-blur-sm border border-white/30 dark:border-white/10">
                       {project.year}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-4 leading-relaxed line-clamp-3">
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-5 leading-relaxed group-hover:translate-x-1 transition-transform duration-300 delay-75">
                     {project.description}
                   </p>
 
@@ -787,20 +788,25 @@ ${formData.name || 'Visitor'}`);
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex gap-3">
-                    <button className="flex-1 group/btn bg-primary-500 dark:bg-primary-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-primary-600 dark:hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary-500/25 flex items-center justify-center gap-2">
-                      <svg className="w-4 h-4 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex gap-3 group-hover:translate-x-1 transition-transform duration-300 delay-150">
+                    <button className="flex-1 group/btn relative overflow-hidden bg-gradient-to-r from-primary-500/90 to-primary-600/90 dark:from-primary-600/90 dark:to-primary-700/90 backdrop-blur-md text-white px-4 py-3 rounded-xl font-medium text-sm transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary-500/30 flex items-center justify-center gap-2 border border-white/20">
+                      {/* Button glass overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
+                      <svg className="relative z-10 w-4 h-4 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-                      Live Demo
+                      <span className="relative z-10">Live Demo</span>
                     </button>
-                    <button className="group/btn bg-gray-100 dark:bg-dark-card text-gray-700 dark:text-dark-text-secondary px-4 py-2.5 rounded-xl font-medium text-sm hover:bg-gray-200 dark:hover:bg-dark-border transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <button className="group/btn bg-white/70 dark:bg-dark-card/70 backdrop-blur-md text-gray-700 dark:text-dark-text-secondary px-4 py-3 rounded-xl font-medium text-sm hover:bg-white/80 dark:hover:bg-dark-card/80 transform hover:scale-105 transition-all duration-300 flex items-center justify-center border border-white/40 dark:border-white/20 hover:shadow-lg">
                       <svg className="w-4 h-4 group-hover/btn:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                       </svg>
                     </button>
                   </div>
                 </div>
+
+                {/* Bottom glass reflection */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
 
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5 dark:from-primary-400/10 dark:via-transparent dark:to-accent-400/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -819,6 +825,231 @@ ${formData.name || 'Visitor'}`);
           </div>
         </div>
       </section>
+
+      {/* Work Experience Section */}
+      <section id="experience" className="py-20 bg-gradient-to-b from-white to-slate-50/50 dark:from-dark-bg dark:to-dark-surface/50 transition-colors duration-500">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-dark-text-primary mb-4">
+              Work <span className="text-accent-500 dark:text-accent-400">Experience</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            {/* Card 1 - iZyane InovSolution */}
+            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-xs font-semibold">2025 - Date</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 dark:text-dark-text-primary mb-1">Software Developer</h3>
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary font-medium mb-1">iZyane InovSolution</p>
+              <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-text-muted mb-2">
+                <svg className="w-4 h-4 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Lusaka, Zambia
+              </div>
+              <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-dark-text-secondary mb-2 space-y-1">
+                <li>Software Development</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-2 py-1 bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded text-xs">Software Development</span>
+              </div>
+            </div>
+            
+            {/* Card 2 - SIKA Diagnostics */}
+            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-xs font-semibold">2023 - Date</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 dark:text-dark-text-primary mb-1">Graphics Designer</h3>
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary font-medium mb-1">SIKA Diagnostics</p>
+              <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-text-muted mb-2">
+                <svg className="w-4 h-4 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Lusaka, Zambia
+              </div>
+              <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-dark-text-secondary mb-2 space-y-1">
+                <li>Graphics designs</li>
+                <li>Visual Communication</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-2 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded text-xs">Graphics Design</span>
+                <span className="px-2 py-1 bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded text-xs">Visual Communication</span>
+              </div>
+            </div>
+
+            {/* Card 3 - Imangatech Innovations LTD */}
+            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-xs font-semibold">2022 - 2024</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 dark:text-dark-text-primary mb-1">Software Web Developer and Finance</h3>
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary font-medium mb-1">Imangatech Innovations LTD</p>
+              <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-text-muted mb-2">
+                <svg className="w-4 h-4 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Ndola, Zambia
+              </div>
+              <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-dark-text-secondary mb-2 space-y-1">
+                <li>Graphics Designer</li>
+                <li>Finance Administrator</li>
+                <li>Software Development</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-2 py-1 bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded text-xs">Web Development</span>
+                <span className="px-2 py-1 bg-success-50 text-success-700 dark:bg-success-900/30 dark:text-success-300 rounded text-xs">Finance</span>
+                <span className="px-2 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded text-xs">Graphics Design</span>
+              </div>
+            </div>
+
+            {/* Card 4 - ZambezOmnisports */}
+            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block px-3 py-1 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded-full text-xs font-semibold">2022 - 2024</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 dark:text-dark-text-primary mb-1">Technical Support, Lead Graphics Designer</h3>
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary font-medium mb-1">ZambezOmnisports</p>
+              <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-text-muted mb-2">
+                <svg className="w-4 h-4 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Lusaka, Zambia
+              </div>
+              <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-dark-text-secondary mb-2 space-y-1">
+                <li>Working with the broadcast multi media and technical team</li>
+                <li>Manage graphics design, creation of visual presentation</li>
+                <li>Provide Technical supports during production</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-2 py-1 bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300 rounded text-xs">Broadcasting</span>
+                <span className="px-2 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded text-xs">Graphics Design</span>
+                <span className="px-2 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded text-xs">Technical Support</span>
+              </div>
+            </div>
+
+            {/* Card 5 - ZUCT */}
+            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded-full text-xs font-semibold">2021 - 2024</span>
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 dark:text-dark-text-primary mb-1">Software Engineer</h3>
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary font-medium mb-1">Zambi University College of Technology (ZUCT)</p>
+              <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-text-muted mb-2">
+                <svg className="w-4 h-4 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Lusaka, Zambia
+              </div>
+              <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-dark-text-secondary mb-2 space-y-1">
+                <li>Participated in Final year projects in both web and mobile development and gained graphics designs</li>
+                <li>Participated in Networking hands on During the institution Computer lab infrastructure connection under Cable laying</li>
+                <li>Participated in mini-projects labs from my software engineering courses</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-2 py-1 bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded text-xs">Software Engineering</span>
+                <span className="px-2 py-1 bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded text-xs">Web Development</span>
+                <span className="px-2 py-1 bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded text-xs">Mobile Development</span>
+                <span className="px-2 py-1 bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded text-xs">Networking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 bg-white dark:bg-dark-bg transition-colors duration-500">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-dark-text-primary mb-4">
+              Professional <span className="bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent">Certifications</span>
+            </h2>
+            <p className="text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto text-lg leading-relaxed">
+              Validated expertise across various technologies and methodologies through industry-recognized certifications.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certificates.map((certificate: Certificate, index: number) => (
+              <div 
+                key={certificate.id}
+                className="group bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                style={{ 
+                  animationDelay: `${index * 100}ms`,
+                  animation: 'fadeInUp 0.6s ease-out forwards'
+                }}
+              >
+                {/* Certificate Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 dark:from-primary-400 dark:to-accent-400 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="text-right">
+                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                      certificate.status === 'Active' 
+                        ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' 
+                        : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'
+                    }`}>
+                      {certificate.status}
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Certificate Title & Issuer */}
+                <div className="mb-4">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-dark-text-primary mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                    {certificate.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-dark-text-secondary mb-1">
+                    <span className="font-medium">Issuer:</span> {certificate.issuer}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-dark-text-secondary">
+                    <span className="font-medium">Date:</span> {certificate.date}
+                  </p>
+                </div>
+
+                {/* Certificate Footer */}
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-dark-border">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block px-3 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded-full text-xs font-medium">
+                      {certificate.type}
+                    </span>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs text-gray-500 dark:text-dark-text-muted">
+                      ID: {certificate.credentialId}
+                    </p>
+                    <button 
+                      onClick={() => viewCertificate(certificate.fileName)}
+                      className="text-xs text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium mt-1 flex items-center gap-1 group-hover:scale-105 transition-transform duration-300"
+                    >
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      View Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Certification Summary */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-4 px-6 py-3 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-2xl border border-primary-100 dark:border-primary-800">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary">
+                  6 Active Certifications
+                </span>
+              </div>
+              <div className="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-primary-500 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary">
+                  Verified & Up-to-date
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-primary-25 to-accent-25 dark:from-dark-surface dark:via-dark-bg dark:to-dark-card transition-colors duration-500 relative overflow-hidden">
