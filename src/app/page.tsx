@@ -385,10 +385,10 @@ ${formData.name || 'Visitor'}`);
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
                 Software Engineer | Full-Stack Developer | <br />
-                Graphics Designer | Digital Innovator | IT Support Specialist
+                Graphic Designer | Digital Solutions Expert | IT Specialist 
               </h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed">
-                With over <span className="font-semibold text-primary-600 dark:text-primary-400">three years of hands-on experience</span>, I specialize in developing robust cross-platform mobile and web applications that solve real-world problems. My journey in tech has taken me from building innovative fintech solutions with <span className="font-semibold">MojaLoop</span> to crafting data-driven insights and scalable financial systems.
+                With <span className="font-semibold text-primary-600 dark:text-primary-400">3+ years crafting digital solutions</span>, I specialize in developing scalable web applications and mobile solutions that drive business value. My expertise spans full-stack development, from creating intuitive user interfaces to building robust backend systems and integrating secure payment solutions.
               </p>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed">
                 I hold a <span className="font-semibold text-secondary-900 dark:text-dark-text-primary">Bachelor's degree in Computer Science</span> from Mulungushi University, where I built a strong foundation in software engineering principles, algorithms, and system design. My technical expertise spans the full development stack—from intuitive frontend interfaces to powerful backend architectures and seamless payment integrations.
@@ -407,7 +407,7 @@ ${formData.name || 'Visitor'}`);
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-accent-50 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-lg text-sm font-medium">
                   <span className="text-lg">🚀</span>
-                  15+ Projects Delivered
+                  5+ Projects Delivered
                 </div>
               </div>
               <div className="flex gap-4 mt-8">
@@ -422,8 +422,8 @@ ${formData.name || 'Visitor'}`);
                     💻
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-secondary-900 dark:text-dark-text-primary mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">Web application, systems & Full-stack system Development</h4>
-                    <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Building cross-platform system applications and web apps with modern frameworks and cutting-edge technologies.</p>
+                    <h4 className="font-bold text-xl text-secondary-900 dark:text-dark-text-primary mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">Full-Stack Development</h4>
+                    <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Building modern web applications and systems using React, Next.js, Spring Boot, and cloud technologies.</p>
                   </div>
                 </div>
               </div>
@@ -435,8 +435,8 @@ ${formData.name || 'Visitor'}`);
                     💳
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-secondary-900 dark:text-dark-text-primary mb-3 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-300">System Payment Integration</h4>
-                    <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Delivering scalable financial solutions and actionable insights for digital banking platforms.</p>
+                    <h4 className="font-bold text-xl text-secondary-900 dark:text-dark-text-primary mb-3 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-300">Payment Integration</h4>
+                    <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Implementing secure payment systems and financial technology solutions for businesses.</p>
                   </div>
                 </div>
               </div>
@@ -448,8 +448,8 @@ ${formData.name || 'Visitor'}`);
                     ☁️
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-secondary-900 dark:text-dark-text-primary mb-3 group-hover:text-success-600 dark:group-hover:text-success-400 transition-colors duration-300">Cloud Digital Transformation</h4>
-                    <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Helping businesses modernize and grow with cloud solutions and comprehensive digital transformation.</p>
+                    <h4 className="font-bold text-xl text-secondary-900 dark:text-dark-text-primary mb-3 group-hover:text-success-600 dark:group-hover:text-success-400 transition-colors duration-300">Cloud Solutions</h4>
+                    <p className="text-secondary-600 dark:text-dark-text-secondary leading-relaxed">Designing and deploying scalable cloud infrastructure and digital transformation strategies.</p>
                   </div>
                 </div>
               </div>
@@ -660,13 +660,24 @@ ${formData.name || 'Visitor'}`);
             {[
               {
                 title: 'ZUCT_SMART_SMS',
-                description: 'Web based student information system that is automated and uses obfuscation technology to advance and encrypt the system from any unauthorised users.',
+                description: 'Web based student information system that is automated and uses obfuscation technology to advance and encrypt the system from any unauthorised users. a Web based student accommodation system which makes it easier for students to find accommodation near campus',
                 tech: ['PHP', 'LARAVEL_PHP', 'Data_Mining', 'Web_Based_Application'],
                 image: '/api/placeholder/400/250',
                 category: 'Education',
                 status: 'not yet hosted (unavailable)',
                 year: '2024'
               },
+
+               {
+                title: 'Book Collection system',
+                description: 'Modern Book management system that stores a collection of different kinds of books by category , prices, Authors and their respctive Book titles.',
+                tech: ['PHP', 'RestAPI', 'React', 'tailwindCSS', "Web_Based_Application"],
+                image: '/api/placeholder/400/250',
+                category: 'Education',
+                status: 'Not available',
+                year: '2024'
+              },
+              
               {
                 title: 'My Portfolio',
                 description: 'Web based morden Portfolio.',
@@ -1033,7 +1044,7 @@ ${formData.name || 'Visitor'}`);
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary">
-                  6 Active Certifications
+                  1 Active Certifications
                 </span>
               </div>
               <div className="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>

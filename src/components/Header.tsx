@@ -55,12 +55,15 @@ const Header: React.FC = () => {
                 </nav>
 
                 {/* Theme Toggle + CTA Button + Mobile Menu Toggle */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                     <ThemeToggle />
                     <Link 
                         href="#contact" 
-                        className="hidden sm:inline-block px-4 py-2 bg-white dark:bg-primary-500 text-primary-500 dark:text-white font-semibold rounded-lg hover:bg-primary-50 dark:hover:bg-primary-600 transition"
+                        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-primary-600 hover:text-primary-700 font-medium rounded-lg transition-all duration-300 transform hover:scale-105 group backdrop-blur-sm"
                     >
+                        <svg className="w-4 h-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.32 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
                         Hire Me
                     </Link>
                     <button 
