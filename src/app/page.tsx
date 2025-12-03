@@ -838,8 +838,14 @@ ${formData.name || 'Visitor'}`);
       </section>
 
       {/* Work Experience Section */}
-      <section id="experience" className="py-20 bg-gradient-to-b from-white to-slate-50/50 dark:from-dark-bg dark:to-dark-surface/50 transition-colors duration-500">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section id="experience" className="py-20 bg-gradient-to-b from-white to-slate-50/50 dark:from-dark-bg dark:to-dark-surface/50 transition-colors duration-500 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-30 dark:opacity-10 pointer-events-none">
+          <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-accent-400/10 dark:bg-accent-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-primary-400/10 dark:bg-primary-400/20 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-dark-text-primary mb-4">
               Work <span className="text-accent-500 dark:text-accent-400">Experience</span>
@@ -847,7 +853,14 @@ ${formData.name || 'Visitor'}`);
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {/* Card 1 - iZyane InovSolution */}
-            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+            <div className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-primary-500/20 dark:hover:shadow-primary-400/30 transition-all duration-700 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              {/* Glass sliding overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+              
+              {/* Secondary glass layer */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-accent-500/5 to-primary-500/5 dark:from-primary-400/10 dark:via-accent-400/10 dark:to-primary-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col gap-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-xs font-semibold">2025 - Date</span>
               </div>
@@ -863,10 +876,21 @@ ${formData.name || 'Visitor'}`);
               <div className="flex flex-wrap gap-2 mt-2">
                 <span className="px-2 py-1 bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded text-xs">Software Development</span>
               </div>
+              </div>
+              
+              {/* Bottom glass reflection */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
             </div>
             
             {/* Card 2 - SIKA Diagnostics */}
-            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+            <div className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-accent-500/20 dark:hover:shadow-accent-400/30 transition-all duration-700 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              {/* Glass sliding overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+              
+              {/* Secondary glass layer */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 via-purple-500/5 to-accent-500/5 dark:from-accent-400/10 dark:via-purple-400/10 dark:to-accent-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col gap-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-xs font-semibold">2023 - Date</span>
               </div>
@@ -884,10 +908,21 @@ ${formData.name || 'Visitor'}`);
                 <span className="px-2 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded text-xs">Graphics Design</span>
                 <span className="px-2 py-1 bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded text-xs">Visual Communication</span>
               </div>
+              </div>
+              
+              {/* Bottom glass reflection */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
             </div>
 
             {/* Card 3 - Imangatech Innovations LTD */}
-            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+            <div className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-purple-400/30 transition-all duration-700 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              {/* Glass sliding overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+              
+              {/* Secondary glass layer */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-success-500/5 to-purple-500/5 dark:from-purple-400/10 dark:via-success-400/10 dark:to-purple-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col gap-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-xs font-semibold">2022 - 2024</span>
               </div>
@@ -907,10 +942,21 @@ ${formData.name || 'Visitor'}`);
                 <span className="px-2 py-1 bg-success-50 text-success-700 dark:bg-success-900/30 dark:text-success-300 rounded text-xs">Finance</span>
                 <span className="px-2 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded text-xs">Graphics Design</span>
               </div>
+              </div>
+              
+              {/* Bottom glass reflection */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
             </div>
 
             {/* Card 4 - ZambezOmnisports */}
-            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+            <div className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 dark:hover:shadow-orange-400/30 transition-all duration-700 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              {/* Glass sliding overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+              
+              {/* Secondary glass layer */}
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-red-500/5 to-orange-500/5 dark:from-orange-400/10 dark:via-red-400/10 dark:to-orange-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col gap-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block px-3 py-1 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded-full text-xs font-semibold">2022 - 2024</span>
               </div>
@@ -930,10 +976,21 @@ ${formData.name || 'Visitor'}`);
                 <span className="px-2 py-1 bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 rounded text-xs">Graphics Design</span>
                 <span className="px-2 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded text-xs">Technical Support</span>
               </div>
+              </div>
+              
+              {/* Bottom glass reflection */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
             </div>
 
             {/* Card 5 - ZUCT */}
-            <div className="bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col gap-4">
+            <div className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 dark:hover:shadow-indigo-400/30 transition-all duration-700 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              {/* Glass sliding overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+              
+              {/* Secondary glass layer */}
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-blue-500/5 to-indigo-500/5 dark:from-indigo-400/10 dark:via-blue-400/10 dark:to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col gap-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded-full text-xs font-semibold">2021 - 2024</span>
               </div>
@@ -954,14 +1011,24 @@ ${formData.name || 'Visitor'}`);
                 <span className="px-2 py-1 bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded text-xs">Mobile Development</span>
                 <span className="px-2 py-1 bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded text-xs">Networking</span>
               </div>
+              </div>
+              
+              {/* Bottom glass reflection */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-white dark:bg-dark-bg transition-colors duration-500">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section id="certifications" className="py-20 bg-white dark:bg-dark-bg transition-colors duration-500 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-30 dark:opacity-10 pointer-events-none">
+          <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-primary-400/10 dark:bg-primary-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-accent-400/10 dark:bg-accent-400/20 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '3s'}}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-dark-text-primary mb-4">
               Professional <span className="bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent">Certifications</span>
@@ -975,12 +1042,19 @@ ${formData.name || 'Visitor'}`);
             {certificates.map((certificate: Certificate, index: number) => (
               <div 
                 key={certificate.id}
-                className="group bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm border border-gray-100/50 dark:border-dark-border/50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                className="group relative bg-white/70 dark:bg-dark-surface/70 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-primary-500/20 dark:hover:shadow-primary-400/30 transition-all duration-700 hover:scale-105 hover:-translate-y-3 overflow-hidden"
                 style={{ 
                   animationDelay: `${index * 100}ms`,
                   animation: 'fadeInUp 0.6s ease-out forwards'
                 }}
               >
+                {/* Glass sliding overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 dark:via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                
+                {/* Secondary glass layer */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-accent-500/5 to-primary-500/5 dark:from-primary-400/10 dark:via-accent-400/10 dark:to-primary-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div className="relative z-10">
                 {/* Certificate Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 dark:from-primary-400 dark:to-accent-400 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1034,6 +1108,13 @@ ${formData.name || 'Visitor'}`);
                     </button>
                   </div>
                 </div>
+                </div>
+                
+                {/* Bottom glass reflection */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 dark:via-white/20 to-transparent"></div>
+                
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5 dark:from-primary-400/10 dark:via-transparent dark:to-accent-400/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               </div>
             ))}
           </div>
