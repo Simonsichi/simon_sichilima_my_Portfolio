@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-white dark:text-dark-text-primary">Simon Sichilima</h3>
             <p className="text-white/70 dark:text-dark-text-secondary text-sm leading-relaxed">
-              Software Engineer passionate about creating digital solutions that make a difference. 
-              Let's build something amazing together.
+              Software Engineer | Graphics Designer passionate and dedicated on transformaing and bringing the Futer to the now, through digital solutions # powered by Technology. 
+              The futuer starts with you and 1 line of code.
             </p>
           </div>
           <div>
